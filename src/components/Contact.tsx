@@ -1,4 +1,12 @@
-const Contact = () => {
+import React from "react";
+
+//type props bisa dipakai untuk variabel
+type Props = {
+    name: string
+    phone: string
+}
+                                // ini adalah variabel
+const Contact: React.FC<Props> = ({ name, phone }) => {
     return (
 //style dalam div disebut prop/properties
         <div style={{
@@ -9,11 +17,11 @@ const Contact = () => {
                 fontSize: "16px",
                 color: 'black',
                 marginBottom: 8,
-            }}>Angel Lord</p>
+            }}>{name}</p>
             <p style={{
                 fontSize: "16px",
                 color: 'black',
-            }}>089123456789</p>
+            }}>{phone}</p>
         </div>
     );
 };
