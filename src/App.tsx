@@ -34,8 +34,8 @@ function App() {
   return (
     <div>
       {contactItems.map((item) => (
-           <Contact key={item.id} name="Angle Lord" phone="08912345678" />
-                //key harus ada pada fungsi looping
+           <Contact key={item.id} name={item.name} phone={item.phone} />
+                //key harus ada pada fungsi looping, setiap item memanggil
       ))}
     </div>
   );

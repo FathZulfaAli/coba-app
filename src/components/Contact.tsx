@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 //type props bisa dipakai untuk variabel
 type Props = {
@@ -7,8 +7,14 @@ type Props = {
 }
                                 // ini adalah variabel
 const Contact: React.FC<Props> = ({ name, phone }) => {
-    const [isPhoneCensored, setIsPhoneCensored] = useState(false)
-    
+    const [isPhoneCensored, setIsPhoneCensored] = useState(false);
+
+    useEffect(() => {
+        if (isPhoneCensored) {
+            alert(`${name}'s phone number is censored !`)
+        }
+    }, [isPhoneCensored] )
+
     return (
 //style dalam div disebut prop/properties
         <div style={{
