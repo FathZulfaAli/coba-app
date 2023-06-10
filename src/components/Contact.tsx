@@ -13,6 +13,7 @@ const Contact: React.FC<Props> = ({ name, phone }) => {
         if (isPhoneCensored) {
             alert(`${name}'s phone number is censored !`)
         }
+        // eslint-disable-next-line
     }, [isPhoneCensored] )
 
     return (
